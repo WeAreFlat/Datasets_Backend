@@ -50,7 +50,6 @@
 
     console.log(actual_JSON.features[0].geometry);
 
-
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 11,
@@ -86,11 +85,48 @@
 
         var json = map.data.addGeoJson(actual_JSON);
 
-//        console.log(json.type);
+//        map.data.forEach(function (feature) {
+//            console.log(feature.getId());
+//        });
+
 
         map.data.setStyle({
             fillColor: 'green',
             strokeWeight: 2
+        });
+
+        map.data.forEach(function (feature) {
+            if (feature == map.data.getFeatureById('CBD')) {
+                map.data.setStyle(function (feature) {
+                    return {
+                        fillColor: 'blue'
+                    }
+                })
+            }
+        });
+
+        //Prints a feature to console
+        function findFeatureById(feature) {
+            console.log(map.data.getFeatureById(feature));
+        };
+        findFeatureById('Parnell');
+
+//        map.data.remove(map.data.getFeatureById('CBD'));
+
+        map.data.forEach(function (feature) {
+
+            if (typeof feature.getProperty('mbie') === 'undefined') {
+                map.data.remove(feature);
+                console.log('doesnt exist');
+            } else {
+                var MBIE = feature.getProperty('mbie');
+                for (i = 0; i<MBIE.length; i++) {
+                    if (MBIE[i] == "exists")
+                        console.log("I keep you hon")
+                    else
+                        map.data.remove(feature);
+                }
+            }
         });
     }
 

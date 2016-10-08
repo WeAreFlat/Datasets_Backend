@@ -3,17 +3,13 @@
   "features": [
     {
       "type": "Feature",
+      "id": "CBD",
       "properties": {
         "stroke": "#555555",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill": "#555555",
-        "fill-opacity": 0.5,
-        "id": [
-          514103,
-          514102,
-          514101
-        ]
+        "fill-opacity": 0.5
       },
       "geometry": {
         "type": "Polygon",
@@ -392,13 +388,14 @@
     },
     {
       "type": "Feature",
+      "id": "Parnell",
       "properties": {
         "stroke": "#555555",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill": "#555555",
         "fill-opacity": 0.5,
-        "id": [515901, 515902]
+        "mbie": ["exists"]
       },
       "geometry": {
         "type": "Polygon",
