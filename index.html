@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <title>lol</title>
+    <title>HAHAHAH</title>
     <style>
         html, body {
             height: 100%;
@@ -17,6 +17,11 @@
     </style>
 </head>
 <body>
+
+<form name="feedback" method="post" action="mailto:you@site.com">
+    <label for="suburb">Name:</label>
+    <input type="text" id="suburb" name="suburb" size="30">
+</form>
 <div id="map"></div>
 <script>
 
@@ -44,7 +49,7 @@
     (function init() {
         loadJSON(function (response) {
             // Parse JSON string into object
-            actual_JSON = JSON.parse(response);
+            return actual_JSON = JSON.parse(response);
         });
     })();
 
