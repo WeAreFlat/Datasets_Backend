@@ -3,13 +3,13 @@
   "features": [
     {
       "type": "Feature",
-      "id": "CBD",
       "properties": {
         "stroke": "#555555",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "fill": "#555555",
-        "fill-opacity": 0.5
+        "fill-opacity": 0.5,
+        "suburb_name": "Auckland Central"
       },
       "geometry": {
         "type": "Polygon",
@@ -289,7 +289,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Grafton"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -395,7 +402,7 @@
         "stroke-opacity": 1,
         "fill": "#555555",
         "fill-opacity": 0.5,
-        "mbie": ["exists"]
+        "suburb_name": "Parnell"
       },
       "geometry": {
         "type": "Polygon",
@@ -559,7 +566,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Newmarket"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -658,7 +672,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Remuera"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -813,7 +834,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Orakei"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -924,7 +952,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Meadowbank"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -999,7 +1034,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Saint Jones"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -1134,7 +1176,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Mission Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -1273,7 +1322,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Kohimarama"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -1404,7 +1460,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Saint Heliers"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -1619,7 +1682,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Glendowie"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -1866,7 +1936,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Glenn Innes"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -2077,7 +2154,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Point England"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -2308,7 +2392,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Panmure"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -2583,7 +2674,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Stonefields"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -2650,7 +2748,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Mount Wellington"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -2909,7 +3014,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Ellerslie"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -3060,7 +3172,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Penrose"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -3183,7 +3302,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Greenlane"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -3346,7 +3472,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Onehunga"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -3573,7 +3706,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "One Tree Hill"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -3712,7 +3852,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Hillsborough"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -4147,7 +4294,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Epsom"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -4434,7 +4588,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Mount Roskill"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -4897,7 +5058,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Lynfield"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -5120,7 +5288,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Three Kings"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -5243,7 +5418,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Mount Eden"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -5454,7 +5636,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Sandringham"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -5653,7 +5842,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Eden Terrace"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -5720,7 +5916,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Kingsland"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -5839,7 +6042,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Grey Lynn"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -6078,7 +6288,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Freemans Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -6201,7 +6418,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Saint Marys Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -6348,7 +6572,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Ponsonby"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -6487,7 +6718,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Herne Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -6586,7 +6824,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Westhaven"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -6653,7 +6898,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Westmere"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -6852,7 +7104,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Point Chevalier"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -7071,7 +7330,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Mount Albert"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -7426,7 +7692,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Blockhouse Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -7949,7 +8222,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Green Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -8272,7 +8552,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "New Windsor"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -8391,7 +8678,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Avondale"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -9378,7 +9672,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Waterview"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -9601,7 +9902,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "New Lynn"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -9948,7 +10256,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Titirangi"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -10643,7 +10958,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Kelston"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -10866,7 +11188,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Glen Eden"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -11073,7 +11402,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Glendene"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -11304,7 +11640,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Te Atatu South"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -11539,7 +11882,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Henderson"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -12110,7 +12460,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Te Atatu Peninsula"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -12717,7 +13074,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Stanley Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -13024,7 +13388,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Devonport"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -13515,7 +13886,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Narrowneck"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -13754,7 +14132,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Bayswater"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -14305,7 +14690,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Belmont"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -14564,7 +14956,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Hauraki"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -14787,7 +15186,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Takapuna"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -15150,7 +15556,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Milford"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -15409,7 +15822,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Castor Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -15580,7 +16000,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Forrest Hill"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -15779,7 +16206,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Campbells Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -15950,7 +16384,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Mairangi Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -16157,7 +16598,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Northcote Point"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -16300,7 +16748,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Northcote"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -16503,7 +16958,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Hillcrest"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -16574,7 +17036,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Wairau Valley"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -16673,7 +17142,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Glenfield"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -16920,7 +17396,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Chatswood"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -17107,7 +17590,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Highbury"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -17362,7 +17852,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Beach Haven"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -17613,7 +18110,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Birkdale"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -17792,7 +18296,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Greenhithe"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -18143,7 +18654,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Unsworth Heights"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -18298,7 +18816,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Bay View"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -18561,7 +19086,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Totara Vale"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -18704,7 +19236,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Sunnynook"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -18835,7 +19374,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Murrays Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -19106,7 +19652,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Rothesay Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -19265,7 +19818,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Windsor Park"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -19376,7 +19936,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Pinehill"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -19535,7 +20102,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Browns Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -19822,7 +20396,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Oteha"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -19937,7 +20518,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Northcross"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -20056,7 +20644,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Torbay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -20315,7 +20910,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Schnapper Rock"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -20466,7 +21068,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Rosedale"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -20621,7 +21230,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Albany"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -20872,7 +21488,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Fairview Heights"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -21067,7 +21690,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Mangere Bridge"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -21998,7 +22628,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Favona"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -22165,7 +22802,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Otahuhu"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -22388,7 +23032,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Pakuranga"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -22687,7 +23338,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Pakuranga Heights"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -22906,7 +23564,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Sunnyhills"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -23061,7 +23726,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Farm Cove"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -23216,7 +23888,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Half Moon Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -23567,7 +24246,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Eastern Beach"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -23682,7 +24368,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Bucklands Beach"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -24217,7 +24910,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Mellons Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -24364,7 +25064,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Highland Park"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -24523,7 +25230,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Howick"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -24682,7 +25396,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Cockle Bay"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -24993,7 +25714,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Shelly Park"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -25220,7 +25948,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Somerville"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -25355,7 +26090,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Botany Downs"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -25506,7 +26248,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Golflands"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -25765,7 +26514,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Northpark"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -25932,7 +26688,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "East Tamaki"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -26523,7 +27286,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Otara"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -26710,7 +27480,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Papatoetoe"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -26981,7 +27758,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Middlemore Hospital"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -27104,7 +27888,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Mangere East"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -27263,7 +28054,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Mangere"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -27962,7 +28760,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Goodwood Heights"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -28073,7 +28878,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Totara Heights"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -28176,7 +28988,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Flat Bush"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -28579,7 +29398,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "East Tamaki Heights"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -28762,7 +29588,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#555555",
+        "fill-opacity": 0.5,
+        "suburb_name": "Dannemora"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [

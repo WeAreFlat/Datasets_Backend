@@ -3,7 +3,8 @@
 <head>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <title>HAHAHAH</title>
+    <title>Just for Pat</title>
+
     <style>
         html, body {
             height: 100%;
@@ -17,128 +18,7 @@
     </style>
 </head>
 <body>
-
-<form name="feedback" method="post" action="mailto:you@site.com">
-    <label for="suburb">Name:</label>
-    <input type="text" id="suburb" name="suburb" size="30">
-</form>
 <div id="map"></div>
-<script>
-
-    var mapCenter = {lat: -36.8629404, lng: 174.7250425};
-
-    function loadJSON(callback) {
-
-
-        //loading a GeoJSON file
-        var xobj = new XMLHttpRequest();
-        xobj.overrideMimeType("application/json");
-        xobj.open('GET', 'suburbs.json', false); // Replace 'my_data' with the path to your file
-        xobj.onreadystatechange = function () {
-            if (xobj.readyState == 4 && xobj.status == "200") {
-                // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-                callback(xobj.responseText);
-            }
-        };
-        xobj.send(null);
-    }
-
-    //parsing json
-
-    var actual_JSON = null;
-    (function init() {
-        loadJSON(function (response) {
-            // Parse JSON string into object
-            return actual_JSON = JSON.parse(response);
-        });
-    })();
-
-    console.log(actual_JSON.features[0].geometry);
-
-    function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 11,
-            center: mapCenter,
-            styles: [{
-                "featureType": "landscape",
-                "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]
-            }, {
-                "featureType": "poi",
-                "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]
-            }, {
-                "featureType": "road.highway",
-                "stylers": [{"saturation": -100}, {"visibility": "simplified"}]
-            }, {
-                "featureType": "road.arterial",
-                "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]
-            }, {
-                "featureType": "road.local",
-                "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]
-            }, {
-                "featureType": "transit",
-                "stylers": [{"saturation": -100}, {"visibility": "simplified"}]
-            }, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {
-                "featureType": "water",
-                "elementType": "labels",
-                "stylers": [{"visibility": "on"}, {"lightness": -25}, {"saturation": -100}]
-            }, {
-                "featureType": "water",
-                "elementType": "geometry",
-                "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]
-            }]
-        });
-
-        var json = map.data.addGeoJson(actual_JSON);
-
-//        map.data.forEach(function (feature) {
-//            console.log(feature.getId());
-//        });
-
-
-        map.data.setStyle({
-            fillColor: 'green',
-            strokeWeight: 2
-        });
-
-        map.data.forEach(function (feature) {
-            if (feature == map.data.getFeatureById('CBD')) {
-                map.data.setStyle(function (feature) {
-                    return {
-                        fillColor: 'blue'
-                    }
-                })
-            }
-        });
-
-        //Prints a feature to console
-        function findFeatureById(feature) {
-            console.log(map.data.getFeatureById(feature));
-        };
-        findFeatureById('Parnell');
-
-//        map.data.remove(map.data.getFeatureById('CBD'));
-
-        map.data.forEach(function (feature) {
-
-            if (typeof feature.getProperty('mbie') === 'undefined') {
-                map.data.remove(feature);
-                console.log('doesnt exist');
-            } else {
-                var MBIE = feature.getProperty('mbie');
-                for (i = 0; i<MBIE.length; i++) {
-                    if (MBIE[i] == "exists")
-                        console.log("I keep you hon")
-                    else
-                        map.data.remove(feature);
-                }
-            }
-        });
-    }
-
-
-</script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAbaVnGNkLP6T9y0ujBg-3ucg3cQellwE&callback=initMap">
-</script>
+<script src="script.js" defer></script>
 </body>
 </html>
