@@ -90,29 +90,24 @@ function initMap() {
 	// 	console.log(feature.getProperty('suburb_name'));
 	// });
 
-
+	//Tooltip init and code for it popping up in the center of each suburb on mouse over
 	var infowindow = new google.maps.InfoWindow();
 
-
 	map.data.addListener('mouseover', function (event) {
-		var myHTML = event.feature.getProperty("suburb_name");
-		var string2 = JSON.parse(JSON.stringify(event.feature.getProperty('bounds')));
-
-		console.log(string2);
-		var position = {'lat': (string2.north + string2.south) / 2, 'lng': (string2.west + string2.east) / 2};
+		var tooltip_text = event.feature.getProperty("suburb_name");
+		var parsed_maps_obj = JSON.parse(JSON.stringify(event.feature.getProperty('bounds')));
+		var tooltip_center = {'lat': (parsed_maps_obj.north + parsed_maps_obj.south) / 2, 'lng': (parsed_maps_obj.west + parsed_maps_obj.east) / 2};
 
 
-		infowindow.setContent("<div style='width:150px; text-align: center;'>" + myHTML + "</div>");
-		infowindow.setPosition(position);
+		infowindow.setContent("<div style='width:150px; text-align: center;'>" + tooltip_text + "</div>");
+		infowindow.setPosition(tooltip_center);
 		infowindow.setOptions({pixelOffset: new google.maps.Size(0, 0)});
 		infowindow.open(map);
-		// console.log(event.feature.getProperty('bounds'));
-
-		// var string = event.feature.getProperty('bounds');
 
 
 	});
 
+	//Calculates boundaries of each suburb
 	map.data.forEach(function (e) {
 
 		//check for a polygon
@@ -139,52 +134,4 @@ function initMap() {
 			// new google.maps.Rectangle({map:map,bounds:bounds,clickable:false})
 		}
 	});
-
-
-	//Prints a feature to console
-	// function findFeatureById(feature) {
-	// 	console.log(map.data.getFeatureById(feature));
-	// };
-
-
-	// window.onload = function () {
-	// 	var obj = document.getElementById('test_button');
-	// 	obj.onmouseover = function () {
-	// 		obj.style.background = 'red';
-	// 		map.data.forEach(function (feature) {
-	//
-	// 			if (typeof feature.getProperty('mbie') === 'undefined') {
-	// 				map.data.remove(feature);
-	// 				console.log('doesnt exist');
-	// 			} else {
-	// 				var MBIE = feature.getProperty('mbie');
-	// 				for (i = 0; i<MBIE.length; i++) {
-	// 					if (MBIE[i] === "exists")
-	// 						console.log("I keep you hon")
-	// 					else
-	// 						map.data.remove(feature);
-	// 				}
-	// 			}
-	// 		});
-	// 		console.log('lol');
-	// 	};
-	// 	obj.onmouseout = function () {
-	// 		obj.style.background = 'yellow';
-	// 		map.data.forEach(function (feature) {
-	//
-	// 			if (typeof feature.getProperty('mbie') === 'undefined') {
-	// 				map.data.remove(feature);
-	// 				console.log('doesnt exist');
-	// 			} else {
-	// 				var MBIE = feature.getProperty('mbie');
-	// 				for (i = 0; i<MBIE.length; i++) {
-	// 					if (MBIE[i] === "nothing")
-	// 						console.log("I keep you hon")
-	// 					else
-	// 						map.data.remove(feature);
-	// 				}
-	// 			}
-	// 		});
-	// 	}
-	// };
 }
