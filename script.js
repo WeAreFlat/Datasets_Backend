@@ -85,23 +85,59 @@ function initMap() {
 		}
 	});
 
-	var count = 0;
+	//Output the suburb list
+	// map.data.forEach(function (feature) {
+	// 	console.log(feature.getProperty('suburb_name'));
+	// });
 
-	map.data.forEach(function (feature) {
-		console.log(feature.getProperty('suburb_name'));
-		count++;
-	});
-
-	console.log(count);
 
 	var infowindow = new google.maps.InfoWindow();
 
-	map.data.addListener('click', function(event) {
-		var myHTML = event.feature.getProperty("Description");
-		infowindow.setContent("<div style='width:150px; text-align: center;'>"+myHTML+"</div>");
-		infowindow.setPosition(event.feature.getGeometry());
-		infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
+
+	map.data.addListener('mouseover', function (event) {
+		var myHTML = event.feature.getProperty("suburb_name");
+		var string2 = JSON.parse(JSON.stringify(event.feature.getProperty('bounds')));
+
+		console.log(string2);
+		var position = {'lat': (string2.north + string2.south) / 2, 'lng': (string2.west + string2.east) / 2};
+
+
+		infowindow.setContent("<div style='width:150px; text-align: center;'>" + myHTML + "</div>");
+		infowindow.setPosition(position);
+		infowindow.setOptions({pixelOffset: new google.maps.Size(0, 0)});
 		infowindow.open(map);
+		// console.log(event.feature.getProperty('bounds'));
+
+		// var string = event.feature.getProperty('bounds');
+
+
+	});
+
+	map.data.forEach(function (e) {
+
+		//check for a polygon
+		if (e.getGeometry().getType() === 'Polygon') {
+
+			//initialize the bounds
+			var bounds = new google.maps.LatLngBounds();
+
+			//iterate over the paths
+			e.getGeometry().getArray().forEach(function (path) {
+
+				//iterate over the points in the path
+				path.getArray().forEach(function (latLng) {
+
+					//extend the bounds
+					bounds.extend(latLng);
+				});
+
+			});
+
+			//now use the bounds
+			var some = e.setProperty('bounds', bounds);
+
+			// new google.maps.Rectangle({map:map,bounds:bounds,clickable:false})
+		}
 	});
 
 
