@@ -53,22 +53,20 @@ function color_range(start, finish) {
 		array_output.push(i);
 		array_output.push(i);
 		array_output.push(i);
-		array_output.push(i);
-		array_output.push(i);
-		array_output.push(i);
-		array_output.push(i);
-		array_output.push(i);
 
 	}
 	return array_output;
 };
 
-var color_values2222 = color_range(40, 66);
-var color_values = [40,40,40,40,40,40,40,40,40,40,41,41,41,41,41,41,41,41,41,41,42,42,42,42,42,42,42,42,42,43,43,43,43,43,43,43,43,43,44,44,44,44,44,44,44,44,44,45,45,45,45,45,45,45,45,45,46,46,46,46,46,46,46,46,46,47,47,47,47,47,47,47,47,47,48,48,48,48,48,48,48,48,48,49,49,49,49,49,49,49,49,49,50,50,50,50,50,50,50,50,50,51,51,51,51,51,51,51,51,51,52,52,52,52,52,52,52,52,52,53,53,53,53,53,53,53,53,53,54,54,54,54,54,54,54,54,54,55,55,55,55,55,55,55,55,55,56,56,56,56,56,56,56,56,56,57,57,57,57,57,57,57,57,57,58,58,58,58,58,58,58,58,58,59,59,59,59,59,59,59,59,59,60,60,60,60,60,60,60,60,60,61,61,61,61,61,61,61,61,61,62,62,62,62,62,62,62,62,62,63,63,63,63,63,63,63,63,63,64,64,64,64,64,64,64,64,64,65,65,65,65,65,65,65,65,65, 66, 67];
+var values = color_range(25, 80);
+// console.log(JSON.stringify(values));
+var color_values = [23, 23, 24, 24, 25, 25, 25, 25, 26, 26, 26, 26, 27, 27, 27, 27, 28, 28, 28, 28, 29, 29, 29, 29, 30, 30, 30, 30, 31, 31, 31, 31, 32, 32, 32, 32, 33, 33, 33, 33, 34, 34, 34, 34, 35, 35, 35, 35, 36, 36, 36, 36, 37, 37, 37, 37, 38, 38, 38, 38, 39, 39, 39, 39, 40, 40, 40, 40, 41, 41, 41, 41, 42, 42, 42, 42, 43, 43, 43, 43, 44, 44, 44, 44, 45, 45, 45, 45, 46, 46, 46, 46, 47, 47, 47, 47, 48, 48, 48, 48, 48, 48, 49, 49, 49, 49, 50, 50, 50, 50, 51, 51, 51, 51, 52, 52, 52, 52, 53, 53, 53, 53, 54, 54, 54, 54, 55, 55, 55, 55, 55, 55, 56, 56, 56, 56, 57, 57, 57, 57, 58, 58, 58, 58, 59, 59, 59, 59, 60, 60, 60, 60, 61, 61, 61, 61, 62, 62, 62, 62, 62, 62, 63, 63, 63, 63, 64, 64, 64, 64, 65, 65, 65, 65, 66, 66, 66, 66, 67, 67, 67, 67, 68, 68, 68, 68, 69, 69, 69, 69, 70, 70, 70, 70, 70, 70, 71, 71, 71, 71, 72, 72, 72, 72, 73, 73, 73, 73, 74, 74, 74, 74, 75, 75, 75, 75, 76, 76, 76, 76, 77, 77, 77, 77, 78, 78, 78, 78, 78, 78, 79, 79, 79, 79, 80, 80, 81, 81];
 
 color_values = color_values.reverse();
 
-console.log(JSON.stringify(color_values2222));
+// console.log(color_values.length);
+
+
 var price_values = range(142, 380);
 
 
@@ -122,9 +120,8 @@ function initMap() {
 
 	map.data.setStyle(function (feature) {
 		var index_of_price = price_values.indexOf(parseInt(feature.getProperty('price'), 10));
-		console.log(index_of_price);
 
-		var color = index_of_price !== -1 ? 'hsla(14, 90%, ' + color_values[index_of_price] + '%, 1)' : 'blue';
+		var color = index_of_price !== -1 ? 'hsla(14, 100%, ' + color_values[index_of_price] + '%, 1)' : 'blue';
 		return {
 			fillColor: color,
 			fillOpacity: 1.0,
@@ -160,7 +157,7 @@ function initMap() {
 	});
 
 	map.data.addListener('mouseover', function (event) {
-		var tooltip_text = event.feature.getProperty("price") + " " + event.feature.getProperty("suburb_name");
+		var tooltip_text = event.feature.getProperty("price");
 		var parsed_maps_obj = JSON.parse(JSON.stringify(event.feature.getProperty('bounds')));
 		var tooltip_center = {
 			'lat': (parsed_maps_obj.north + parsed_maps_obj.south) / 2,
@@ -180,15 +177,21 @@ function initMap() {
 // Get the <span> element that closes the modal
 	var span = document.getElementsByClassName("close")[0];
 
-	window.onclick = function(event) {
+	window.onclick = function (event) {
 		if (event.target == modal) {
 			modal.style.display = "none";
 		}
-	}
-
+	};
 	//Modal popup
+	var tradeMeRent = 'http://www.trademe.co.nz/Browse/CategoryAttributeSearchResults.aspx?search=1&cid=5748&sidebar=1&132=FLAT&selected135=5&selected136=77&134=1&135=5&136=';
+	var tradeMeFlatmates = 'http://www.trademe.co.nz/Browse/CategoryAttributeSearchResults.aspx?search=1&cid=2975&sidebar=1&76=2975&134=1&135=7&136=';
 	map.data.addListener('click', function (event) {
+		var rentLink = document.getElementById("rent");
+		var flatmatesLink = document.getElementById("flatmates");
 		var suburb = event.feature;
+
+		rentLink.href = tradeMeRent + suburb.getProperty('tmid');
+		flatmatesLink.href = tradeMeFlatmates + suburb.getProperty('tmid');
 		modal.style.display = "block";
 		console.log(suburb.getProperty('suburb_name'));
 	});
