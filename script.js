@@ -37,6 +37,33 @@ var actual_JSON = null;
 	});
 })();
 
+//Generates a range
+function range(start, finish) {
+	var array_output = [];
+	for (i = start; i < finish; i++) {
+		array_output.push(i);
+	}
+	return array_output;
+};
+
+function color_range(start, finish) {
+	var array_output = [40, 40, 40, 40, 40];
+	for (i = start; i < finish; i++) {
+		array_output.push(i);
+		array_output.push(i);
+		array_output.push(i);
+		array_output.push(i);
+		array_output.push(i);
+
+	}
+	return array_output;
+};
+
+var color_values = color_range(40, 96);
+var price_values = range(113, 402);
+// console.log(price_values.indexOf(300));
+// console.log(price_values);
+
 
 var map;
 function initMap() {
@@ -75,13 +102,28 @@ function initMap() {
 	// Pushing GeoJSON to maps
 	var json = map.data.addGeoJson(actual_JSON);
 
-	map.data.forEach(function (feature) {
-		if (feature == map.data.getFeatureById('CBD')) {
-			map.data.setStyle(function (feature) {
-				return {
-					fillColor: 'blue'
-				}
-			})
+	// map.data.forEach(function (feature) {
+	// 	var index_of_price = price_values.indexOf(feature.getProperty('price'));
+	// 	console.log(index_of_price);
+	// 	map.data.setStyle(function (feature) {
+	// 		return {
+	// 			fillColor: 'hsla(14, ' + color_values[index_of_price] + '%, 67%, 1)',
+	// 			fillOpacity: 1.0
+	// 		}
+	// 	})
+	// });
+
+	map.data.setStyle(function(feature) {
+		var index_of_price = price_values.indexOf(feature.getProperty('price'));
+		console.log(index_of_price);
+
+		var color = index_of_price !== -1 ? 'hsla(14, ' + color_values[index_of_price] + '%, 67%, 1)' : 'blue';
+		return {
+			fillColor: color,
+			fillOpacity: 1.0,
+			strokeOpacity: 1,
+			strokeColor: '#FF8A65',
+			strokeWeight: 1
 		}
 	});
 
@@ -96,7 +138,10 @@ function initMap() {
 	map.data.addListener('mouseover', function (event) {
 		var tooltip_text = event.feature.getProperty("suburb_name");
 		var parsed_maps_obj = JSON.parse(JSON.stringify(event.feature.getProperty('bounds')));
-		var tooltip_center = {'lat': (parsed_maps_obj.north + parsed_maps_obj.south) / 2, 'lng': (parsed_maps_obj.west + parsed_maps_obj.east) / 2};
+		var tooltip_center = {
+			'lat': (parsed_maps_obj.north + parsed_maps_obj.south) / 2,
+			'lng': (parsed_maps_obj.west + parsed_maps_obj.east) / 2
+		};
 
 
 		infowindow.setContent("<div style='width:150px; text-align: center;'>" + tooltip_text + "</div>");
