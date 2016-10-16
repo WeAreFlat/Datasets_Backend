@@ -40,15 +40,19 @@ var actual_JSON = null;
 //Generates a range
 function range(start, finish) {
 	var array_output = [];
-	for (i = start; i < finish; i++) {
+	for (i = start; i<finish; i++) {
 		array_output.push(i);
 	}
 	return array_output;
 };
 
 function color_range(start, finish) {
-	var array_output = [40, 40, 40, 40, 40];
-	for (i = start; i < finish; i++) {
+	var array_output = [];
+	for (i = start; i<finish; i++) {
+		array_output.push(i);
+		array_output.push(i);
+		array_output.push(i);
+		array_output.push(i);
 		array_output.push(i);
 		array_output.push(i);
 		array_output.push(i);
@@ -59,10 +63,13 @@ function color_range(start, finish) {
 	return array_output;
 };
 
-var color_values = color_range(40, 96);
-var price_values = range(113, 402);
-// console.log(price_values.indexOf(300));
-// console.log(price_values);
+var color_values2222 = color_range(40, 66);
+var color_values = [40,40,40,40,40,40,40,40,40,40,41,41,41,41,41,41,41,41,41,41,42,42,42,42,42,42,42,42,42,43,43,43,43,43,43,43,43,43,44,44,44,44,44,44,44,44,44,45,45,45,45,45,45,45,45,45,46,46,46,46,46,46,46,46,46,47,47,47,47,47,47,47,47,47,48,48,48,48,48,48,48,48,48,49,49,49,49,49,49,49,49,49,50,50,50,50,50,50,50,50,50,51,51,51,51,51,51,51,51,51,52,52,52,52,52,52,52,52,52,53,53,53,53,53,53,53,53,53,54,54,54,54,54,54,54,54,54,55,55,55,55,55,55,55,55,55,56,56,56,56,56,56,56,56,56,57,57,57,57,57,57,57,57,57,58,58,58,58,58,58,58,58,58,59,59,59,59,59,59,59,59,59,60,60,60,60,60,60,60,60,60,61,61,61,61,61,61,61,61,61,62,62,62,62,62,62,62,62,62,63,63,63,63,63,63,63,63,63,64,64,64,64,64,64,64,64,64,65,65,65,65,65,65,65,65,65, 66, 67];
+
+color_values = color_values.reverse();
+
+console.log(JSON.stringify(color_values2222));
+var price_values = range(142, 380);
 
 
 var map;
@@ -113,11 +120,11 @@ function initMap() {
 	// 	})
 	// });
 
-	map.data.setStyle(function(feature) {
-		var index_of_price = price_values.indexOf(feature.getProperty('price'));
+	map.data.setStyle(function (feature) {
+		var index_of_price = price_values.indexOf(parseInt(feature.getProperty('price'), 10));
 		console.log(index_of_price);
 
-		var color = index_of_price !== -1 ? 'hsla(14, ' + color_values[index_of_price] + '%, 67%, 1)' : 'blue';
+		var color = index_of_price !== -1 ? 'hsla(14, 90%, ' + color_values[index_of_price] + '%, 1)' : 'blue';
 		return {
 			fillColor: color,
 			fillOpacity: 1.0,
@@ -153,23 +160,37 @@ function initMap() {
 	});
 
 	map.data.addListener('mouseover', function (event) {
-		var tooltip_text = event.feature.getProperty("suburb_name");
+		var tooltip_text = event.feature.getProperty("price") + " " + event.feature.getProperty("suburb_name");
 		var parsed_maps_obj = JSON.parse(JSON.stringify(event.feature.getProperty('bounds')));
 		var tooltip_center = {
 			'lat': (parsed_maps_obj.north + parsed_maps_obj.south) / 2,
 			'lng': (parsed_maps_obj.west + parsed_maps_obj.east) / 2
 		};
-		infoBubble.content = '<div class="tooltip"><p>' + tooltip_text + '</p></div>';
+		infoBubble.content = '<div class="tooltip"><p>' + tooltip_text + '$</p></div>';
 		infoBubble.position = new google.maps.LatLng(tooltip_center);
 		infoBubble.open();
+	});
 
+	// Get the modal
+	var modal = document.getElementById('myModal');
 
-		// infowindow.setContent("<div style='width:150px; text-align: center;'>" + tooltip_text + "</div>");
-		// infowindow.setPosition(tooltip_center);
-		// infowindow.setOptions({pixelOffset: new google.maps.Size(0, 0)});
-		// infowindow.open(map);
+// Get the button that opens the modal
+	var btn = document.getElementById("myBtn");
 
+// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
 
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+
+	//Modal popup
+	map.data.addListener('click', function (event) {
+		var suburb = event.feature;
+		modal.style.display = "block";
+		console.log(suburb.getProperty('suburb_name'));
 	});
 
 	//Calculates boundaries of each suburb
