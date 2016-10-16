@@ -133,7 +133,24 @@ function initMap() {
 	// });
 
 	//Tooltip init and code for it popping up in the center of each suburb on mouse over
-	var infowindow = new google.maps.InfoWindow();
+	// var infowindow = new google.maps.InfoWindow();
+	var infoBubble = new InfoBubble({
+		map: map,
+		content: null,
+		position: new google.maps.LatLng(-35, 151),
+		shadowStyle: 0,
+		padding: 0,
+		backgroundColor: 'white',
+		borderRadius: 3,
+		arrowSize: 10,
+		borderWidth: 0,
+		borderColor: '#2c2c2c',
+		disableAutoPan: true,
+		hideCloseButton: true,
+		arrowPosition: 40,
+		backgroundClassName: 'phoney',
+		arrowStyle: 2
+	});
 
 	map.data.addListener('mouseover', function (event) {
 		var tooltip_text = event.feature.getProperty("suburb_name");
@@ -142,12 +159,15 @@ function initMap() {
 			'lat': (parsed_maps_obj.north + parsed_maps_obj.south) / 2,
 			'lng': (parsed_maps_obj.west + parsed_maps_obj.east) / 2
 		};
+		infoBubble.content = '<div class="tooltip"><p>' + tooltip_text + '</p></div>';
+		infoBubble.position = new google.maps.LatLng(tooltip_center);
+		infoBubble.open();
 
 
-		infowindow.setContent("<div style='width:150px; text-align: center;'>" + tooltip_text + "</div>");
-		infowindow.setPosition(tooltip_center);
-		infowindow.setOptions({pixelOffset: new google.maps.Size(0, 0)});
-		infowindow.open(map);
+		// infowindow.setContent("<div style='width:150px; text-align: center;'>" + tooltip_text + "</div>");
+		// infowindow.setPosition(tooltip_center);
+		// infowindow.setOptions({pixelOffset: new google.maps.Size(0, 0)});
+		// infowindow.open(map);
 
 
 	});
