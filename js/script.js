@@ -13,6 +13,27 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 });
 
+//Make TradeMe API call
+var tradeMeTotalCount;
+// $(document).ready(function () {
+// 	$.ajax({
+// 		url: 'https://api.trademe.co.nz/v1/Search/Property/Rental.json?oauth_consumer_key=D17F85682EC9E85C5331A5EC8A37EF6C&oauth_signature_method=PLAINTEXT&oauth_signature=E2C3B1648930003B5A57AEA51486DDF0%26&suburb=393',
+// 		success: function (data) {
+// 			tradeMeTotalCount = data.TotalCount;
+// 			//process the JSON data
+// 		}
+// 	});
+// 	console.log(tradeMeTotalCount);
+// });
+
+$.getJSON('https://api.trademe.co.nz/v1/Search/Property/Rental.json?oauth_consumer_key=D17F85682EC9E85C5331A5EC8A37EF6C&oauth_signature_method=PLAINTEXT&oauth_signature=E2C3B1648930003B5A57AEA51486DDF0%26&suburb=393', function (data) {
+	tradeMeTotalCount = data;
+});
+
+
+
+
+
 
 //loading a GeoJSON file
 function loadJSON(callback) {
@@ -130,6 +151,10 @@ function initMap() {
 			strokeWeight: 1
 		}
 	});
+
+	window.onload = function () {
+		console.log(tradeMeTotalCount);
+	};
 
 	//Output the suburb list
 	// map.data.forEach(function (feature) {
