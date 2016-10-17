@@ -121,43 +121,43 @@ function initMap() {
 		}
 	});
 
-	window.onload = function () {
-		console.log(tradeMeTotalCount);
-	};
-
 	//Tooltip init and code for it popping up in the center of each suburb on mouse over
-	var infoBubble = new InfoBubble({
-		map: map,
-		content: null,
-		position: new google.maps.LatLng(-35, 151),
-		shadowStyle: 0,
-		padding: 0,
-		backgroundColor: '#4A148C',
-		borderRadius: 6,
-		arrowSize: 10,
-		borderWidth: 0,
-		borderColor: '#2c2c2c',
-		disableAutoPan: true,
-		hideCloseButton: true,
-		arrowPosition: 50,
-		backgroundClassName: 'phoney',
-		arrowStyle: 0
-	});
 
-	map.data.addListener('mouseover', function (event) {
-		var parsed_maps_obj = JSON.parse(JSON.stringify(event.feature.getProperty('bounds')));
-		var tooltip_center = {
-			'lat': (parsed_maps_obj.north + parsed_maps_obj.south) / 2,
-			'lng': (parsed_maps_obj.west + parsed_maps_obj.east) / 2
-		};
-		infoBubble.content = '<div class="tooltip"><p>' + event.feature.getProperty("suburb_name") + '</p><br><p id="colouredPrice">$' + event.feature.getProperty("price") + '</p></div>';
-		infoBubble.position = new google.maps.LatLng(tooltip_center);
-		infoBubble.open();
-	});
 
-	map.data.addListener('mouseout', function (event) {
-		infoBubble.close();
-	});
+	if (window.matchMedia("(min-width: 890px)").matches) {
+		var infoBubble = new InfoBubble({
+			map: map,
+			content: null,
+			position: new google.maps.LatLng(-35, 151),
+			shadowStyle: 0,
+			padding: 0,
+			backgroundColor: '#4A148C',
+			borderRadius: 6,
+			arrowSize: 10,
+			borderWidth: 0,
+			borderColor: '#2c2c2c',
+			disableAutoPan: true,
+			hideCloseButton: true,
+			arrowPosition: 50,
+			backgroundClassName: 'phoney',
+			arrowStyle: 0
+		});
+		map.data.addListener('mouseover', function (event) {
+			var parsed_maps_obj = JSON.parse(JSON.stringify(event.feature.getProperty('bounds')));
+			var tooltip_center = {
+				'lat': (parsed_maps_obj.north + parsed_maps_obj.south) / 2,
+				'lng': (parsed_maps_obj.west + parsed_maps_obj.east) / 2
+			};
+			infoBubble.content = '<div class="tooltip"><p>' + event.feature.getProperty("suburb_name") + '</p><br><p id="colouredPrice">$' + event.feature.getProperty("price") + '</p></div>';
+			infoBubble.position = new google.maps.LatLng(tooltip_center);
+			infoBubble.open();
+		});
+
+		map.data.addListener('mouseout', function (event) {
+			infoBubble.close();
+		});
+	} else {
+	}
 
 	// Get the modal
 	var modal = document.getElementById('myModal');
@@ -174,14 +174,11 @@ function initMap() {
 		}
 	};
 
-	window.onload = function () {
-		tradeMeTotalCount;
-	};
-
 	//Modal popup
 	var tradeMeRent = 'http://www.trademe.co.nz/Browse/CategoryAttributeSearchResults.aspx?search=1&cid=5748&sidebar=1&132=FLAT&selected135=5&selected136=77&134=1&135=5&136=';
 	var tradeMeFlatmates = 'http://www.trademe.co.nz/Browse/CategoryAttributeSearchResults.aspx?search=1&cid=2975&sidebar=1&76=2975&134=1&135=7&136=';
 	map.data.addListener('click', function (event) {
+		$(".stats").fadeIn(120)
 		var rentLink = document.getElementById("rentLink");
 		var flatmatesLink = document.getElementById("flatmatesLink");
 		var suburbName = document.getElementById('suburbName');
