@@ -188,7 +188,10 @@ body {
     top: 5px;
     margin-left: 4px;
 }
-
+.statIcon {
+    width: 60px;
+    height: 100%;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -238,10 +241,16 @@ body {
     }
     .availableFlats {
         width: 50%;
+        float: left;
     }
     .availableRentals {
         width: 50%;
+        float: left
     }
+    .statIcon {
+        width: 50px;
+        height: 100%;
+        padding-right: 8px !important;
     }
 }
 
@@ -255,8 +264,11 @@ body {
     box-sizing: border-box;
     margin: 0px 0 10px 0;
 }
+.suburbMainInfo > div:nth-child(3) {
+/*    clear: both;*/
 
-.suburbMainInfo img {
+}
+.statIcon {
     float: left;
     padding-right: 25px;
 }
@@ -274,10 +286,9 @@ body {
     font-weight: 100;
 }
 
-.mobileView .tmData:nth-child(1) {
-    /* not working atm. To be padding between the columns */
+.availableFlats > .suburbMainInfo, .availableRentals > .suburbMainInfo {
+    width: 100% !important;
 }
-
 .availableListing {
     float: left;
     width: 100%;
