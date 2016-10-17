@@ -86,7 +86,15 @@ body {
     z-index: 950;
     background-color: rgba(20, 20, 0, 0.4);
 }
-
+#about {
+    position: fixed;
+    right: 12px;
+    top: 12px;
+    width: 35px;
+    height: auto;
+    color: #4A148C;
+    z-index: 10001;
+}
 .homePosition {
     position: relative;
     top: 50%;
@@ -210,6 +218,7 @@ body {
         overflow: hidden;
         bottom: 20px;
         left: 20px;
+        border-radius: 5px;
     }
 
     .scale {
@@ -218,7 +227,7 @@ body {
         left: auto;
         top: auto;
         right: 20px;
-
+        border-radius: 5px;
     }
 
     .tmButton {
