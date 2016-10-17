@@ -133,15 +133,15 @@ function initMap() {
 		shadowStyle: 0,
 		padding: 0,
 		backgroundColor: '#4A148C',
-		borderRadius: 3,
+		borderRadius: 6,
 		arrowSize: 10,
 		borderWidth: 0,
 		borderColor: '#2c2c2c',
 		disableAutoPan: true,
 		hideCloseButton: true,
-		arrowPosition: 40,
+		arrowPosition: 50,
 		backgroundClassName: 'phoney',
-		arrowStyle: 2
+		arrowStyle: 0
 	});
 
 	map.data.addListener('mouseover', function (event) {
