@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		var js_file = document.createElement('script');
 		js_file.type = 'text/javascript';
-		js_file.src = 'https://maps.googleapis.com/maps/api/js?callback=initMap&signed_in=true&key=AIzaSyBAbaVnGNkLP6T9y0ujBg-3ucg3cQellwE&language=' + lang;
+		js_file.src = 'https://maps.googleapis.com/maps/api/js?callback=initMap&signed_in=false&key=AIzaSyBAbaVnGNkLP6T9y0ujBg-3ucg3cQellwE&language=' + lang;
 		document.getElementsByTagName('head')[0].appendChild(js_file);
 	}
 });
@@ -72,6 +72,9 @@ var map;
 function initMap() {
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 11,
+		maxZoom: 13,
+		minZoom: 11,
+		disableDefaultUI: true,
 		center: {lat: -36.8629404, lng: 174.7250425},
 		styles: [{
 			"featureType": "landscape",
@@ -129,7 +132,7 @@ function initMap() {
 		position: new google.maps.LatLng(-35, 151),
 		shadowStyle: 0,
 		padding: 0,
-		backgroundColor: 'white',
+		backgroundColor: '#4A148C',
 		borderRadius: 3,
 		arrowSize: 10,
 		borderWidth: 0,
@@ -142,15 +145,18 @@ function initMap() {
 	});
 
 	map.data.addListener('mouseover', function (event) {
-		var tooltip_text = event.feature.getProperty("price");
 		var parsed_maps_obj = JSON.parse(JSON.stringify(event.feature.getProperty('bounds')));
 		var tooltip_center = {
 			'lat': (parsed_maps_obj.north + parsed_maps_obj.south) / 2,
 			'lng': (parsed_maps_obj.west + parsed_maps_obj.east) / 2
 		};
-		infoBubble.content = '<div class="tooltip"><p>$' + tooltip_text + '</p></div>';
+		infoBubble.content = '<div class="tooltip"><p>' + event.feature.getProperty("suburb_name") + '</p><br><p id="colouredPrice">$' + event.feature.getProperty("price") + '</p></div>';
 		infoBubble.position = new google.maps.LatLng(tooltip_center);
 		infoBubble.open();
+	});
+
+	map.data.addListener('mouseout', function (event) {
+		infoBubble.close();
 	});
 
 	// Get the modal

@@ -23476,7 +23476,7 @@
         "fill-opacity": 0.5,
         "suburb_name": "Pakuranga Heights",
         "price": "176",
-        "tmid": "NA"
+        "tmid": "25"
       },
       "geometry": {
         "type": "Polygon",
@@ -29450,7 +29450,7 @@
         "stroke-opacity": 1,
         "fill": "#555555",
         "fill-opacity": 0.5,
-        "suburb_name": "East Tamaki Heights",
+        "suburb_name": "East Tamaki H.",
         "price": "199",
         "tmid": "3490"
       },
