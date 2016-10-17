@@ -89,47 +89,46 @@
 </head>
 
 <body>
-<!--<div class="overlay"></div>-->
+<div class="overlay"></div>
 <!--<div class="modal startScreen">-->
-<!--<div class="homePosition">-->
-<!--<div class="mainTitle">Find your place in-->
-<!--<br> Auckland with Flattie.</div>-->
-<!--<div class="mainDescription">Click on a suburb to learn more.-->
-<!--<br>Lighter colored suburbs are cheaper to rent.</div>-->
-<!--<button class="buttonStyle titleButtonPosition dropShadow" id="start">Get Started</button>-->
+    <!--<div class="homePosition">-->
+        <!--<div class="mainTitle">Find your place in-->
+            <!--<br> Auckland with Flattie.-->
+        <!--</div>-->
+        <!--<div class="mainDescription">Click on a suburb to learn more.-->
+            <!--<br>Lighter colored suburbs are cheaper to rent.-->
+        <!--</div>-->
+        <!--<button class="buttonStyle titleButtonPosition dropShadow" id="start">Get Started</button>-->
+    <!--</div>-->
 <!--</div>-->
-<!--</div>-->
-
-<div id="map"></div>
-<script src="js/script.js" defer></script>
 
 
 <div class="modal stats">
     <button class="buttonStyle closeBtn dropShadow" id="close">close</button>
-    <div class="mainTitle queryTitlePosition listingHeadingMargin">Orakei</div>
+    <div class="mainTitle queryTitlePosition listingHeadingMargin" id="suburbName">Orakei</div>
 
     <div class="suburbMainInfo">
         <img src="img/cash_hand.svg" width="65px" height="100%">
-        <div>$220</div>
+        <div id="mbiePrice">$220</div>
         <div>Average Asking Price Per Room</div>
     </div>
     <div class="availableFlats">
         <div class="suburbMainInfo">
             <img src="img/two_people_house.svg" width="65px" height="100%">
-            <div>16</div>
+            <div id="flatmatesCount">16</div>
             <div>Looking For Flatmates</div>
         </div>
-        <a id="rent" href="#" class="button" target="_blank">
+        <a id="flatmatesLink" href="#" class="button" target="_blank">
             <button class="buttonStyle tmButton  dropShadow">View Flatmate Listings</button>
         </a>
     </div>
     <div class="availableRentals">
         <div class="suburbMainInfo">
             <img src="img/person_house.svg" width="65px" height="100%">
-            <div>35</div>
+            <div id="rentCount">35</div>
             <div>Available Rentals</div>
         </div>
-        <a id="flatmates" href="#" class="button" target="_blank">
+        <a id="rentLink" href="#" class="button" target="_blank">
             <button class="buttonStyle tmButton  dropShadow">View Rental Listings</button>
         </a>
     </div>
@@ -150,6 +149,9 @@
         </div>
     </div>
 </div>
+
+<div id="map"></div>
+<script src="js/script.js" defer></script>
 
 <script src="js/main.js"></script>
 </body>

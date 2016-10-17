@@ -18,6 +18,7 @@
   "homepage": "https://github.com/WeAreFlat/Datasets_Backend#readme",
   "dependencies": {
     "formidable": "^1.0.17",
+    "js-info-bubble": "^0.8.0",
     "xhr2": "^0.1.3"
   }
 }

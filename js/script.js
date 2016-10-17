@@ -13,27 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 });
 
-//Make TradeMe API call
-var tradeMeTotalCount;
-// $(document).ready(function () {
-// 	$.ajax({
-// 		url: 'https://api.trademe.co.nz/v1/Search/Property/Rental.json?oauth_consumer_key=D17F85682EC9E85C5331A5EC8A37EF6C&oauth_signature_method=PLAINTEXT&oauth_signature=E2C3B1648930003B5A57AEA51486DDF0%26&suburb=393',
-// 		success: function (data) {
-// 			tradeMeTotalCount = data.TotalCount;
-// 			//process the JSON data
-// 		}
-// 	});
-// 	console.log(tradeMeTotalCount);
-// });
-
-$.getJSON('https://api.trademe.co.nz/v1/Search/Property/Rental.json?oauth_consumer_key=D17F85682EC9E85C5331A5EC8A37EF6C&oauth_signature_method=PLAINTEXT&oauth_signature=E2C3B1648930003B5A57AEA51486DDF0%26&suburb=393', function (data) {
-	tradeMeTotalCount = data;
+//Set AJAX to synchronous
+$.ajaxSetup({
+	async: true
 });
-
-
-
-
-
 
 //loading a GeoJSON file
 function loadJSON(callback) {
@@ -82,14 +65,8 @@ function color_range(start, finish) {
 var values = color_range(25, 80);
 // console.log(JSON.stringify(values));
 var color_values = [23, 23, 24, 24, 25, 25, 25, 25, 26, 26, 26, 26, 27, 27, 27, 27, 28, 28, 28, 28, 29, 29, 29, 29, 30, 30, 30, 30, 31, 31, 31, 31, 32, 32, 32, 32, 33, 33, 33, 33, 34, 34, 34, 34, 35, 35, 35, 35, 36, 36, 36, 36, 37, 37, 37, 37, 38, 38, 38, 38, 39, 39, 39, 39, 40, 40, 40, 40, 41, 41, 41, 41, 42, 42, 42, 42, 43, 43, 43, 43, 44, 44, 44, 44, 45, 45, 45, 45, 46, 46, 46, 46, 47, 47, 47, 47, 48, 48, 48, 48, 48, 48, 49, 49, 49, 49, 50, 50, 50, 50, 51, 51, 51, 51, 52, 52, 52, 52, 53, 53, 53, 53, 54, 54, 54, 54, 55, 55, 55, 55, 55, 55, 56, 56, 56, 56, 57, 57, 57, 57, 58, 58, 58, 58, 59, 59, 59, 59, 60, 60, 60, 60, 61, 61, 61, 61, 62, 62, 62, 62, 62, 62, 63, 63, 63, 63, 64, 64, 64, 64, 65, 65, 65, 65, 66, 66, 66, 66, 67, 67, 67, 67, 68, 68, 68, 68, 69, 69, 69, 69, 70, 70, 70, 70, 70, 70, 71, 71, 71, 71, 72, 72, 72, 72, 73, 73, 73, 73, 74, 74, 74, 74, 75, 75, 75, 75, 76, 76, 76, 76, 77, 77, 77, 77, 78, 78, 78, 78, 78, 78, 79, 79, 79, 79, 80, 80, 81, 81];
-
 color_values = color_values.reverse();
-
-// console.log(color_values.length);
-
-
 var price_values = range(142, 380);
-
 
 var map;
 function initMap() {
@@ -128,17 +105,6 @@ function initMap() {
 	// Pushing GeoJSON to maps
 	var json = map.data.addGeoJson(actual_JSON);
 
-	// map.data.forEach(function (feature) {
-	// 	var index_of_price = price_values.indexOf(feature.getProperty('price'));
-	// 	console.log(index_of_price);
-	// 	map.data.setStyle(function (feature) {
-	// 		return {
-	// 			fillColor: 'hsla(14, ' + color_values[index_of_price] + '%, 67%, 1)',
-	// 			fillOpacity: 1.0
-	// 		}
-	// 	})
-	// });
-
 	map.data.setStyle(function (feature) {
 		var index_of_price = price_values.indexOf(parseInt(feature.getProperty('price'), 10));
 
@@ -156,13 +122,7 @@ function initMap() {
 		console.log(tradeMeTotalCount);
 	};
 
-	//Output the suburb list
-	// map.data.forEach(function (feature) {
-	// 	console.log(feature.getProperty('suburb_name'));
-	// });
-
 	//Tooltip init and code for it popping up in the center of each suburb on mouse over
-	// var infowindow = new google.maps.InfoWindow();
 	var infoBubble = new InfoBubble({
 		map: map,
 		content: null,
@@ -188,7 +148,7 @@ function initMap() {
 			'lat': (parsed_maps_obj.north + parsed_maps_obj.south) / 2,
 			'lng': (parsed_maps_obj.west + parsed_maps_obj.east) / 2
 		};
-		infoBubble.content = '<div class="tooltip"><p>' + tooltip_text + '$</p></div>';
+		infoBubble.content = '<div class="tooltip"><p>$' + tooltip_text + '</p></div>';
 		infoBubble.position = new google.maps.LatLng(tooltip_center);
 		infoBubble.open();
 	});
@@ -207,17 +167,47 @@ function initMap() {
 			modal.style.display = "none";
 		}
 	};
+
+	window.onload = function () {
+		tradeMeTotalCount;
+	};
+
 	//Modal popup
 	var tradeMeRent = 'http://www.trademe.co.nz/Browse/CategoryAttributeSearchResults.aspx?search=1&cid=5748&sidebar=1&132=FLAT&selected135=5&selected136=77&134=1&135=5&136=';
 	var tradeMeFlatmates = 'http://www.trademe.co.nz/Browse/CategoryAttributeSearchResults.aspx?search=1&cid=2975&sidebar=1&76=2975&134=1&135=7&136=';
 	map.data.addListener('click', function (event) {
-		var rentLink = document.getElementById("rent");
-		var flatmatesLink = document.getElementById("flatmates");
+		var rentLink = document.getElementById("rentLink");
+		var flatmatesLink = document.getElementById("flatmatesLink");
+		var suburbName = document.getElementById('suburbName');
+
+		var rentCount = document.getElementById("rentCount");
+		var flatmatesCount = document.getElementById("flatmatesCount");
+
+		var mbiePrice = document.getElementById("mbiePrice");
+
 		var suburb = event.feature;
 
-		rentLink.href = tradeMeRent + suburb.getProperty('tmid');
-		flatmatesLink.href = tradeMeFlatmates + suburb.getProperty('tmid');
-		modal.style.display = "block";
+		var propertyID = suburb.getProperty('tmid');
+		var propertyPrice = suburb.getProperty('price');
+		var tradeMeTotalRentals, tradeMeTotalFlatmates;
+
+		//Make TradeMe API call rentals
+		$.getJSON('https://api.trademe.co.nz/v1/Search/Property/Rental.json?oauth_consumer_key=D17F85682EC9E85C5331A5EC8A37EF6C&oauth_signature_method=PLAINTEXT&oauth_signature=E2C3B1648930003B5A57AEA51486DDF0%26&suburb=' + propertyID, function (data) {
+			tradeMeTotalRentals = data;
+			rentCount.innerHTML = tradeMeTotalRentals.TotalCount;
+		});
+
+		$.getJSON('https://api.trademe.co.nz/v1/Search/Flatmates.json?oauth_consumer_key=D17F85682EC9E85C5331A5EC8A37EF6C&oauth_signature_method=PLAINTEXT&oauth_signature=E2C3B1648930003B5A57AEA51486DDF0%26&suburb=' + propertyID, function (data) {
+			tradeMeTotalFlatmates = data;
+			flatmatesCount.innerHTML = tradeMeTotalFlatmates.TotalCount;
+		});
+
+		rentLink.href = tradeMeRent + propertyID;
+		flatmatesLink.href = tradeMeFlatmates + propertyID;
+		suburbName.innerHTML = suburb.getProperty('suburb_name');
+
+		mbiePrice.innerHTML = "$" + propertyPrice;
+
 		console.log(suburb.getProperty('suburb_name'));
 	});
 
