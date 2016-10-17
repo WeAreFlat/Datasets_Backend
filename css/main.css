@@ -221,12 +221,27 @@ body {
     }
 
     .suburbMainInfo {
-        width: calc(50% - 4px) !important;
+        width: calc(40% - 4px) !important;
         box-sizing: border-box;
-        float: left !;
         clear: none;
         overflow: hidden;
-        display: inline-block !important;
+        display: inline-block;
+        float: right;
+    }
+    .stats .suburbMainInfo:nth-child(3) {
+        width: 100% !important;
+        box-sizing: border-box;
+        clear: none;
+        overflow: shown;
+        display: inline-block;
+        float: right;
+    }
+    .availableFlats {
+        width: 50%;
+    }
+    .availableRentals {
+        width: 50%;
+    }
     }
 }
 
