@@ -195,7 +195,9 @@ body {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-
+ .stats {
+        display: none;
+    }
 @media only screen and (min-width: 890px) {
     /* ====================
     DESKTOP
@@ -230,6 +232,9 @@ body {
         overflow: hidden;
         display: inline-block;
         float: right;
+    }
+    .stats {
+        display: none;
     }
     .stats .suburbMainInfo:nth-child(3) {
         width: 100% !important;
