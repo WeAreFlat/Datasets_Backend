@@ -98,7 +98,7 @@ body {
     font-weight: 100;
     color: #ffffff;
     margin-bottom: 10px;
-    padding: 0 0 10px 0;
+    padding: 0 0 5px 0;
 }
 
 .mainDescription {
@@ -196,7 +196,7 @@ body {
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 840px) {
+@media only screen and (min-width: 890px) {
     /* ====================
     DESKTOP
    ==================== */
@@ -240,12 +240,15 @@ body {
         float: right;
     }
     .availableFlats {
-        width: 50%;
         float: left;
+        width: calc(50% - 4px);
+        padding-right: 4px;
     }
     .availableRentals {
         width: 50%;
-        float: left
+        float: left;
+        width: calc(50% - 4px);
+        padding-left: 4px;
     }
     .statIcon {
         width: 50px;
